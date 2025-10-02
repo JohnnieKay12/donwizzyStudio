@@ -1,0 +1,318 @@
+/* Services CSS */
+#services{
+    padding:8rem 0 3rem;
+    background:url('../../assets/banner/banner.png') no-repeat center center;
+    background-size:cover;
+    position:relative;
+
+    &:before{
+        content:'';
+        position:absolute;
+        top:0;
+        min-height: 100%;
+        left:0;
+        right:0;
+        z-index:1;
+        background:var(--dark-layer-color);
+        pointer-events: none;
+    }
+
+    @media (max-width:992px){
+        padding:3rem 0;
+    }
+
+    .title_headling{
+        text-align: center;
+        max-width: 50rem;
+        margin:auto;
+        position:relative;
+        z-index:2;
+
+        & h3{
+            width:90%;
+            font-size: 2.5rem;
+            line-height: 3.214rem;
+            font-weight: 700;
+            color:var(--white-color);
+            margin-bottom:0;
+
+            @media (max-width:767px){
+                width:100%;
+                font-size:1.8rem;
+                line-height: 2.8rem;
+            }
+        }
+        & p{
+            width:90%;
+            font-size: 1.214rem;
+            line-height: 2rem;
+            color:var(--font-color);
+
+            @media (max-width:767px){
+                width:100%;
+            }
+        }
+    }
+    .service_wrapper{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top:5rem;
+
+        @media (max-width:767px){
+            flex-direction: column;
+        }
+
+        .service_box{
+            width:calc(100% / 3 - 2rem);
+            padding:2.8571rem 2.1429rem;
+            border-radius: 1.4286rem;
+            background: var(--bg-dark-color);
+            box-sizing: border-box;
+            margin-bottom:3rem;
+            position:relative;
+            z-index: 3;
+            transition: 0.3s ease-in-out;
+
+            @media (max-width:992px){
+                width:calc(100% / 2 - 1rem);
+            }
+            @media (max-width:767px){
+                width:100%;
+            }
+            .number{
+                position:absolute;
+                font-size: 4.2857rem;
+                line-height: 4.2857rem;
+                right:2.8571rem;
+                top:2.1429rem;
+                opacity: .07;
+                margin:0;
+                transition: 0.3s ease-in-out;
+            }
+            .service_icon{
+                font-size:2.2857rem;
+                width:5rem;
+                height:5rem;
+                line-height: 5rem;
+                border-radius: 50%;
+                color:var(--primary-color);
+                background:var(--primary-bg);
+                text-align: center;
+
+                &.green_icon{
+                    color:var(--green-color);
+                    background:var(--green-color-bg);
+                }
+                &.blue_icon{
+                    color:var(--blue-color);
+                    background:var(--blue-color-bg);
+                }
+            }
+            & h5{
+                font-weight: 600;
+                color:var(--white-color);
+                font-size: 1.7143rem;
+                line-height: 2.4286rem;
+            }
+            & p{
+                font-size: 1.2143rem;
+                line-height: 2rem;
+                color:var(--font-color);
+                font-weight: 500;
+            }
+            .read{
+                font-size:1rem;
+                font-weight: 700;
+                color:var(--white-color);
+                margin-top:2.1429rem;
+                display:inline-block;
+                text-transform: capitalize;
+                cursor: pointer;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+        }
+    }
+}
+
+.read:hover {
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+.read.active {
+    color: var(--primary-color);
+}
+
+.service_box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.service_wrapper{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service_box{
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+}
+
+.service_box.expanded {
+    background: rgba(153, 0, 51, 0.15);
+    border: 1px solid var(--primary-color);
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.service_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service_content p{
+    max-height: 80px; /* collapsed height (enough for short text) */
+    overflow: hidden; /* hide the rest of the text */
+    transition: max-height 0.4s ease-in-out;
+    opacity: 0.8;
+}
+
+.service_content p.expanded{
+    max-height: 500px; /* enough height to fit long text */
+    opacity: 1;
+    animation: fadeInText 0.5s ease-in-out;
+}
+
+.service_text {
+    flex-grow: 1;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+    Workflow Section
+================================= */
+.workflow_section {
+    margin: 70px 0;
+    text-align: center;
+}
+
+.workflow_section h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.workflow_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}  
+.workflow_box {
+    background: var(--bg-dark-color);
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.workflow_box h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+.workflow_box .workflow_icon{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.workflow_box p {
+    font-size: 1rem;
+    color: var(--font-color);
+    line-height: 1.4;
+}
+
+
+/* ===============================
+    Call To Action Banner
+  ================================= */
+.cta_banner {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 12px;
+    margin-top: 80px;
+}  
+
+.cta_banner h3 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cta_banner p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.cta_banner .btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 14px 35px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta_banner .btn:hover {
+    background: var(--bg-dark-color);
+    color: #fff;
+}
+
+/* ===============================
+    Responsive
+  ================================= */
+@media (max-width: 768px) {
+    .title_headling h3 {
+        font-size: 1.6rem;
+    }
+
+    .workflow_section h3,
+    .why_choose_us h3,
+    .cta_banner h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta_banner {
+        padding: 40px 20px;
+    }
+}

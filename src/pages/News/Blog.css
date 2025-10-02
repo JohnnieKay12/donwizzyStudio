@@ -1,0 +1,215 @@
+/* Blog CSS */
+#blog{
+    padding:6rem 0 4rem;
+
+    .blog_wrapper{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        @media (max-width:992px){
+            flex-direction: column-reverse;
+        }
+        .blog_col{
+            width:calc(100% / 2 - 15px);
+            height:auto;
+            position:relative;
+            z-index:1;
+
+            @media (max-width:992px){
+                width:fit-content;
+                padding:2rem;
+            }
+            @media (max-width:767px){ 
+                padding:1.5rem;
+            }
+        }
+        & h3{
+            width:80%;
+            font-size:3rem;
+            line-height: 3.714rem;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @media (max-width:992px){
+                width:100%; 
+                text-align: center;
+            }
+            @media (max-width:767px){ 
+                width:100%;
+                font-size: 2.2rem;
+                line-height: 3.5rem; 
+            }
+        }
+        & p{
+            width:80%;
+            margin:0;
+            padding:0;
+            font-size:1.143rem;
+            line-height: 2rem;
+            color:var(--font-color);
+
+            @media (max-width:992px){ 
+                width:100%; 
+                text-align: center;
+            }
+        }
+        .blog_image{
+            position:relative;
+            text-align: center;
+
+            &:after{
+                content:'';
+                position:absolute;
+                border:10px solid var(--secondary-color);
+                right:45px;
+                left:-45px;
+                bottom:45px;
+                top:-45px;
+                z-index:-1;
+                border-radius: 0 2.1429rem;
+            }
+
+            @media (max-width:767px){
+                &:after{
+                    left:0;
+                }
+            }
+
+            & img{
+                border-radius: 0 2.1429rem;
+                max-width: 100%;
+
+                @media (max-width:767px){
+                    max-width: 85%;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Featured Post */
+
+.featured_post {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.featured_image img {
+    border-radius: 1rem;
+    max-width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+.featured_content {
+    flex: 1;
+}
+
+.featured_content h4 {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.featured_content p {
+    font-size: 1.1rem;
+    color: var(--font-color);
+    margin-bottom: 1.5rem;
+}
+
+.read_more {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.read_more:hover {
+    color: var(--secondary-color);
+}
+
+
+
+
+/* Blog Grid */
+.blog_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.blog_card {
+    background: var(--bg-dark-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.blog_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog_card_content {
+    padding: 1.5rem;
+}
+
+.blog_card_content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+.blog_card_content p {
+    color: var(--font-color);
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.read_more {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.read_more:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Section Headings */
+
+.section_heading {
+    text-align: center;
+    margin: 5rem 0 3rem;
+}
+
+.section_heading h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.section_heading p {
+    font-size: 1.1rem;
+    color: var(--font-color);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
