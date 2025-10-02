@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Footer.css';
-import Logo from '../../assets/logo/logo.png';
+// import Logo from '../../assets/logo/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faXTwitter, faInstagram, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'
@@ -40,7 +40,8 @@ export default function Footer() {
                     {/* Brand Info */}
 
                     <div className='footer-brand'>
-                        <img src={Logo} alt='Logo' className='footer-logo'/>
+                        <img src="/logo/logo.png" alt="Logo" className='footer-logo'/>
+                        {/* <img src={Logo} alt='Logo' className='footer-logo'/> */}
                         <p>
                             DonwizzyStudio brings you premium entertainment, creative ideas, and inspiring content. <br />
                             Stay connected and enjoy the vibe.

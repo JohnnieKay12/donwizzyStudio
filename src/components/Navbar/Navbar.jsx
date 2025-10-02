@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/logo/logo.png';
+// import Logo from '../../assets/logo/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -41,7 +41,7 @@ export default function Navbar() {
                 <nav className='navbar' id='Navbar'>
                     <div className='navbar_brand'>
                         <a href='/'>
-                            <img src={Logo} alt='Logo' />
+                            <img src="/logo/logo.png" alt="Logo" />
                         </a>
                     </div>
                     <div className='navbar_toggler' onClick={sidenavShow}>
