@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./Entertainment.css"
 import { Link } from 'react-router-dom';
-import heroVideo from "../../assets/entertainment/entertainment-hero.mp4";
 import heroPoster from "../../assets/entertainment/entertainment-poster.jpg"
 import movie1 from "../../assets/entertainment/movies1.jpg"
 import music1 from "../../assets/entertainment/music1.jpg"
@@ -107,7 +106,7 @@ export default function Entertainment() {
             {/* Hero Section */}
             <section className='hero'>
 
-                {/* Background Video */}
+                {/* Background image */}
                 <img
                     className='hero-img'
                     src={heroPoster}
